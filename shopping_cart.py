@@ -24,14 +24,18 @@ products = [
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 
+while True: 
+    selected_id = input("Please input a product identifier: ")
+    if selected_id == "DONE":
+        break
+    else:
+        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        matching_product = matching_products[0]
+        print(" SELECTED PRODUCT: " + matching_product["name"] + " (" + str(matching_product["price"]) + ")")
 
-selected_id = input("Please input a product identifier: ")
-matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-matching_product = matching_products[0]
-print(" ... " + matching_product["name"] + " (" + str(matching_product["price"]) + ")")
 
 
-def to_usd(my_price):
+#def to_usd(my_price):
     """
     Converts a numeric value to usd-formatted string, for printing and display purposes.
 
@@ -41,7 +45,7 @@ def to_usd(my_price):
 
     Returns: $4,000.44
     """
-    return f"${my_price:,.2f}" #> $12,000.71
+   # return f"${my_price:,.2f}" #> $12,000.71
 
 # TODO: write some Python code here to produce the desired output
 
