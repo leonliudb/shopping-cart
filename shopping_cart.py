@@ -26,6 +26,9 @@ products = [
 
 
 subtotal_price = 0
+selected_ids = []
+
+
 
 
 while True: 
@@ -33,6 +36,12 @@ while True:
     if selected_id == "DONE":
         break
     else:
+        selected_ids.append(selected_id)
+        
+        
+
+
+for selected_id in selected_ids:      
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0]
         subtotal_price = subtotal_price + matching_product["price"]
