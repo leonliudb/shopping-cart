@@ -24,6 +24,10 @@ products = [
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 
+
+subtotal_price = 0
+
+
 while True: 
     selected_id = input("Please input a product identifier: ")
     if selected_id == "DONE":
@@ -31,23 +35,15 @@ while True:
     else:
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0]
+        subtotal_price = subtotal_price + matching_product["price"]
         print(" SELECTED PRODUCT: " + matching_product["name"] + " (" + str(matching_product["price"]) + ")")
 
 
 
-#def to_usd(my_price):
-    """
-    Converts a numeric value to usd-formatted string, for printing and display purposes.
+def to_usd(my_price):
+    return f"${my_price:,.2f}" 
 
-    Param: my_price (int or float) like 4000.444444
 
-    Example: to_usd(4000.444444)
 
-    Returns: $4,000.44
-    """
-   # return f"${my_price:,.2f}" #> $12,000.71
 
-# TODO: write some Python code here to produce the desired output
-
-#print(products)
-
+print("TOTAL PRICE: " + to_usd(subtotal_price))
