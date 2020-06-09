@@ -40,8 +40,8 @@ while True:
 
 
 print("---------------------------------")
-print("GREEN FOODS GROCERY")
-print("WWW.GREEN-FOODS-GROCERY.COM")
+print("LEON FOODS GROCERY")
+print("WWW.LEON-FOODS-GROCERY.COM")
 print("---------------------------------")
 print("CHECKOUT AT: " + checkout_start_at.strftime("%Y-%m-%d %I:%M %p"))
 print("---------------------------------")
@@ -60,7 +60,6 @@ for selected_id in selected_ids:
 tax = subtotal_price * TAX_RATE
 
 total_price = subtotal_price + tax
-
 
 print("---------------------------------")
 print("SUBTOTAL: " + to_usd(subtotal_price))
