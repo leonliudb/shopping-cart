@@ -1,4 +1,5 @@
 # shopping_cart.py
+import datetime as dt
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -25,10 +26,9 @@ products = [
 
 TAX_RATE = 0.0875
 
+checkout_start_at = dt.datetime.now()
 subtotal_price = 0
 selected_ids = []
-
-
 
 
 while True: 
@@ -37,7 +37,15 @@ while True:
         break
     else:
         selected_ids.append(selected_id)
-        
+
+
+print("---------------------------------")
+print("GREEN FOODS GROCERY")
+print("WWW.GREEN-FOODS-GROCERY.COM")
+print("---------------------------------")
+print("CHECKOUT AT: " + checkout_start_at.strftime("%Y-%m-%d %I:%M %p"))
+
+
         
 def to_usd(my_price):
     return f"${my_price:,.2f}" 
