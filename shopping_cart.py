@@ -71,7 +71,7 @@ for p in selected_ids:
 
 print("---------------------------------")
 print("SUBTOTAL: " + to_usd(subtotal))
-print("TAX: " + to_usd(tax))
+print("TAX(8.75%): " + to_usd(tax))
 print("TOTAL: " + to_usd(total_price))
 print("---------------------------------")
 print("THANKS, SEE YOU AGAIN SOON!")
