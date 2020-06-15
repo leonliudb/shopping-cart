@@ -67,7 +67,7 @@ print("---------------------------------")
 
 print("SELECTED PRODUCTS:")
 for p in selected_ids:
-    print(f"... {p['name']} {to_usd(p['price'])}")
+    print(f"... {p['name']} ({to_usd(p['price'])})")
 
 print("---------------------------------")
 print("SUBTOTAL: " + to_usd(subtotal))
